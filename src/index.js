@@ -1,5 +1,11 @@
 
 exports.min = function min (array) {
+	console.log(min);
+	
+	
+		console.log(array);
+	
+	
   return 0;
 }
 
