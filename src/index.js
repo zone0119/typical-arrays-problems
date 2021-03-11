@@ -6,7 +6,8 @@ exports.min = function min (array) {
     var minCurr;
     for (let index = 0; index < arguments.length; index++) 
     {
-        
+            if(arguments.length == 0)
+                return 0;
             if(index == 0)
             {
                 minCurr = arguments[index];
@@ -31,6 +32,8 @@ exports.max = function max (array) {
     var maxCurr;
     for (let index = 0; index < arguments.length; index++) 
     {       
+             if(arguments.length == 0)
+                return 0;
             if(index == 0)
             {
                 maxCurr = arguments[index];
@@ -50,7 +53,8 @@ exports.max = function max (array) {
 
 exports.avg = function avg (array) {
     //console.log(arguments);
-    
+        if(arguments.length == 0)
+            return 0;
     var summa = 0;
     for (let index = 0; index < arguments.length; index++) 
     {       
