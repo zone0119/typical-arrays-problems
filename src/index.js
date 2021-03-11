@@ -4,7 +4,7 @@ exports.min = function min (array) {
   //console.log(arguments);
     
     var minCurr;
-    for (let index = 0; index <= arguments.length; index++) 
+    for (let index = 0; index < arguments.length; index++) 
     {
         
             if(index == 0)
@@ -29,7 +29,7 @@ exports.max = function max (array) {
   //console.log(arguments);
     
     var maxCurr;
-    for (let index = 0; index <= arguments.length; index++) 
+    for (let index = 0; index < arguments.length; index++) 
     {       
             if(index == 0)
             {
@@ -49,5 +49,17 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    //console.log(arguments);
+    
+    var summa = 0;
+    for (let index = 0; index < arguments.length; index++) 
+    {       
+
+                summa = summa + arguments[index];
+                //console.log("index : " + arguments[index]);
+    }
+
+    //console.log("avg : " + avg);
+    
+  return summa/arguments.length;
 }
