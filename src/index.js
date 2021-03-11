@@ -24,7 +24,28 @@ exports.min = function min (array) {
 }
 
 exports.max = function max (array) {
-  return 0;
+    
+    
+  //console.log(arguments);
+    
+    var maxCurr;
+    for (let index = 0; index <= arguments.length; index++) 
+    {       
+            if(index == 0)
+            {
+                maxCurr = arguments[index];
+            }
+            else if(arguments[index] > maxCurr)
+            {   
+                maxCurr = arguments[index];
+            }
+
+        
+    }
+    //console.log("maxCurr : " + maxCurr);
+}
+    
+  return maxCurr;
 }
 
 exports.avg = function avg (array) {
