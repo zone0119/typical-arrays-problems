@@ -1,69 +1,67 @@
 
 exports.min = function min (array) {
-    
-  //console.log(arguments);
-    
-    var minCurr;
-    for (let index = 0; index < arguments.length; index++) 
-    {
-            if(arguments.length == 0)
-                return 0;
-            if(index == 0)
-            {
-                minCurr = arguments[index];
-            }
-            else if(arguments[index] < minCurr)
-            {   
-                minCurr = arguments[index];
-            }
+    //console.log(arguments);
+    //TypeError: Cannot read property 'length' of undefined
 
-        
-    }
-    //console.log("minCurr : " + minCurr);
-	
-  return minCurr;
+    
+    if(Array.isArray(array) && array.length == 0 || array === undefined)
+    return 0;
+
+    console.log("length : " + array.length);
+      var minCurr;
+      for (let index = 0; index < array.length; index++) 
+      {              
+              if(index == 0)
+              {
+                  minCurr = array[index];
+              }
+              else if(array[index] <= minCurr)
+              {
+                  minCurr = array[index];
+              }        
+      }
+      //console.log("minCurr : " + minCurr);      
+    return minCurr;
 }
 
 exports.max = function max (array) {
-    
-    
+  if(Array.isArray(array) && array.length == 0 || array === undefined)
+  return 0;
   //console.log(arguments);
-    
     var maxCurr;
-    for (let index = 0; index < arguments.length; index++) 
+    for (let index = 0; index < array.length; index++) 
     {       
-             if(arguments.length == 0)
-                return 0;
+             
             if(index == 0)
             {
-                maxCurr = arguments[index];
+                maxCurr = array[index];
             }
-            else if(arguments[index] > maxCurr)
+            else if(array[index] >= maxCurr)
             {   
-                maxCurr = arguments[index];
+                maxCurr = array[index];
             }
 
         
     }
     //console.log("maxCurr : " + maxCurr);
-}
+
     
   return maxCurr;
 }
 
 exports.avg = function avg (array) {
     //console.log(arguments);
-        if(arguments.length == 0)
+        if(Array.isArray(array) && array.length == 0 || array === undefined)
             return 0;
     var summa = 0;
-    for (let index = 0; index < arguments.length; index++) 
+    for (let index = 0; index < array.length; index++) 
     {       
 
-                summa = summa + arguments[index];
+                summa = summa + array[index];
                 //console.log("index : " + arguments[index]);
     }
 
     //console.log("avg : " + avg);
     
-  return summa/arguments.length;
+  return summa/array.length;
 }
